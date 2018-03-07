@@ -11,7 +11,7 @@ void CrossTheLine::Start_Autonomous(float distance, float Encoder_Counts_Per_Whe
 	Run_Autonomous();
 }
 inline float CrossTheLine::Distance_to_Encoder_Counts(){
-	return broadcasted_distance * Encoder_Counts_Per_Wheel_Rotation * Inches_Per_Wheel_Rotation;
+	return (broadcasted_distance * Encoder_Counts_Per_Wheel_Rotation) / Inches_Per_Wheel_Rotation;
 }
 void CrossTheLine::Run_Autonomous(){
 	

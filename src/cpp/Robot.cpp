@@ -52,6 +52,7 @@ class Robot : public IterativeRobot {
 		}
 
 		void TeleopPeriodic() {
+			//autonoumous->Start_Autonomous(Inches to go, Encoder counts per wheel rotation, inches traveled per wheel rotation)
 			autonomous->Start_Autonomous(2, 600, 4);
 			std::cout<<"Left Side: "<<talon_left_enc->GetSelectedSensorPosition(0)<<std::endl;
 			std::cout<<"Right Side: "<<talon_right_enc->GetSelectedSensorPosition(0)<<std::endl;
